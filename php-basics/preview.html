@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./preview.css">
+    <title>Основы PHP</title>
+</head>
+<body>
+    <div class="nav"><a href="/index.html">Главная</a> / Основы PHP</div>
+    <div class="maintitle"><h1>Основы PHP</h1></div>
+    <h2>Чему вы научитесь</h2>
+    <ul>
+        <li>Создавать несложные программы, используя основные конструкции языка (условия, циклы, функции и другие)</li>
+        <li>Составлять программы, состоящие из разных файлов, с использованием пространства имен</li>
+        <li>Правильно анализировать ошибки в коде и пользоваться отладочной печатью при их поиске</li>
+    </ul>
+    <h2>Описание</h2>
+    <p>В этом разделе вы изучите основы языка PHP. Вы познакомитесь с экосистемой PHP, ключевыми возможностями языка, а также узнаете о чистых функциях и именовании. В итоге научитесь использовать и определять функции, искать и анализировать ошибки в коде, а также писать несложные программы на PHP. Как и с другими языками, для программирования на PHP нужно понимать, как работают циклы, библиотеки, логические операции и типы данных — все эти темы разбираются на курсе.</p>
+    <p>Изучать основы PHP вы будете не только в теории, но и на практике. Уже с первого урока вы начнете выполнять упражнения, а в конце раздела — сможете поработать над дополнительными заданиями. Благодаря практике в каждом уроке, вы быстрее освоите этот язык программирования. Знания из этого курса помогут получить основное представление о языке PHP, его принципах и особенностях.</p>
+    <h2>Программа раздела</h2>
+    <ol>
+        <a href="./intro.html">
+            <li class="item">
+                <div class="number">1</div>
+                <div class="content">
+                    <div class="title">Введение</div>
+                    <div class="desc">Познакомитесь с разделом</div>
+                </div>
+            </li>
+        </a>
+        <a href="./hello-world.html">
+            <li class="item">
+                <div class="number">2</div>
+                <div class="content">
+                    <div class="title">Hello, World!</div>
+                    <div class="desc">Напишем первую программу</div>
+                </div>
+            </li>
+        </a>
+        <a href="./instructions.html">
+            <li class="item">
+                <div class="number">3</div>
+                <div class="content">
+                    <div class="title">Инструкции</div>
+                    <div class="desc">Изучим азы построения программ на PHP</div>
+                </div>
+            </li>
+        </a>
+        <a href="./arithmetic-operations.html">
+            <li class="item">
+                <div class="number">4</div>
+                <div class="content">
+                    <div class="title">Арифметические операции</div>
+                    <div class="desc">Переведем арифметические действия на язык программирования</div>
+                </div>
+            </li>
+        </a>
+        <li class="item">
+            <div class="number">5</div>
+            <div class="content">
+                <div class="title">Линтер</div>
+                <div class="desc">Соблюдаем стандарты кодирования</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">6</div>
+            <div class="content">
+                <div class="title">Строки</div>
+                <div class="desc">Научимся работать со строками</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">7</div>
+            <div class="content">
+                <div class="title">Типы данных</div>
+                <div class="desc">Узнаем, что такое типы данных, и как с ними работать</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">8</div>
+            <div class="content">
+                <div class="title">Переменные</div>
+                <div class="desc">Научимся хранить информацию и переиспользовать уже существующие данные</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">9</div>
+            <div class="content">
+                <div class="title">Выражения в определениях</div>
+                <div class="desc">Научимся упрощать код, используем переменные</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">10</div>
+            <div class="content">
+                <div class="title">Интерполяция</div>
+                <div class="desc">Изучим еще один способ работать со строками в PHP</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">11</div>
+            <div class="content">
+                <div class="title">Извлечение символов из строки</div>
+                <div class="desc">Поймем, как получить из строки конкретный символ</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">12</div>
+            <div class="content">
+                <div class="title">Функции и их вызов</div>
+                <div class="desc">Научимся использовать готовые функции</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">13</div>
+            <div class="content">
+                <div class="title">Сигнатура функции</div>
+                <div class="desc">Узнаем, как функция принимает и возвращает значения</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">14</div>
+            <div class="content">
+                <div class="title">Вызов функции – выражения</div>
+                <div class="desc">Научимся использовать результат работы функций</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">15</div>
+            <div class="content">
+                <div class="title">Функции с переменным числом параметров</div>
+                <div class="desc">Познакомимся с расширенными возможностями функций</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">16</div>
+            <div class="content">
+                <div class="title">Детерменнированность и побочные эффекты</div>
+                <div class="desc">Изучим некоторые свойства функций и особенности их работы</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">17</div>
+            <div class="content">
+                <div class="title">Стандартная библиотека</div>
+                <div class="desc">Познакомимся со стандартной библиотекой</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">18</div>
+            <div class="content">
+                <div class="title">Определение функции</div>
+                <div class="desc">Создадим свою первую функцию</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">19</div>
+            <div class="content">
+                <div class="title">Возврат значений из функции</div>
+                <div class="desc">Получим результат работы функции</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">20</div>
+            <div class="content">
+                <div class="title">Параметры функций</div>
+                <div class="desc">Научимся передавать данные в функцию</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">21</div>
+            <div class="content">
+                <div class="title">Необязательные параметры функций</div>
+                <div class="desc">Задаем значения по умолчанию</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">22</div>
+            <div class="content">
+                <div class="title">Окружение</div>
+                <div class="desc">Изучаем, какие значения доступны функциям</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">23</div>
+            <div class="content">
+                <div class="title">Именование</div>
+                <div class="desc">Учимся правильно именовать переменные и функции</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">24</div>
+            <div class="content">
+                <div class="title">Логические операции</div>
+                <div class="desc">Учимся использовать логические выражения и писать функции-предикаты</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">25</div>
+            <div class="content">
+                <div class="title">Условные конструкции if и if-else</div>
+                <div class="desc">Учимся управлять поведением программы в зависимости от разных условий</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">26</div>
+            <div class="content">
+                <div class="title">Тернарный оператор и Элвис</div>
+                <div class="desc">Знакомимся с другими условными конструкциями и применяем их на практике</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">27</div>
+            <div class="content">
+                <div class="title">Конструкция Switch</div>
+                <div class="desc">Учимся пользоваться оператором ветвления</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">28</div>
+            <div class="content">
+                <div class="title">Цикл while</div>
+                <div class="desc">Учимся писать программы для выполнения повторяющихся действий</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">29</div>
+            <div class="content">
+                <div class="title">Использование циклов</div>
+                <div class="desc">Применяем циклы для решения практических задач</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">30</div>
+            <div class="content">
+                <div class="title">Пограничные случаи</div>
+                <div class="desc">Учимся обрабатывать неожиданные данные</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">31</div>
+            <div class="content">
+                <div class="title">Цикл for</div>
+                <div class="desc">Изучаем альтернативу циклу while</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">32</div>
+            <div class="content">
+                <div class="title">Погружаться в строки</div>
+                <div class="desc">Знакомимся с современным кодированием строк, функциями для многобайтовых кодировок и локализацией</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">33</div>
+            <div class="content">
+                <div class="title">Дата и время</div>
+                <div class="desc">Изучаем понятие времени в компьютерах, а также функции для работы с датой и временем</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">34</div>
+            <div class="content">
+                <div class="title">Отладка</div>
+                <div class="desc">Учимся находить ошибки в коде</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">35</div>
+            <div class="content">
+                <div class="title">Ошибка</div>
+                <div class="desc">Изучаем систему предупреждений об ошибках</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">36</div>
+            <div class="content">
+                <div class="title">Включение файлов</div>
+                <div class="desc">Учимся создавать проекты с множеством файлов</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">37</div>
+            <div class="content">
+                <div class="title">Пространство имен</div>
+                <div class="desc">Учимся изолировать части кода друг от друга</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">38</div>
+            <div class="content">
+                <div class="title">Влоденные простарнства имен</div>
+                <div class="desc">Выясняем, как пространства имен соотносятся со структурой файловой системы</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">39</div>
+            <div class="content">
+                <div class="title">Импорт функции</div>
+                <div class="desc">Учимся писать лаконичный код</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">40</div>
+            <div class="content">
+                <div class="title">Описание типов</div>
+                <div class="desc">Обсуждаем, как указывать типы для сигнатуры функции</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">41</div>
+            <div class="content">
+                <div class="title">Ссылки</div>
+                <div class="desc">Выясняем, как работают ссылки в PHP</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">42</div>
+            <div class="content">
+                <div class="title">История PHP</div>
+                <div class="desc">Знакомимся с историей PHP и ее влиянием на дизайн языка</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">43</div>
+            <div class="content">
+                <div class="title">Самостоятельная работа</div>
+                <div class="desc">Дополнительные задания, которые позволяют закрепить полученную теорию</div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="number">44</div>
+            <div class="content">
+                <div class="title">Дополнительные материалы</div>
+                <div class="desc">Статьи и видео, подобранные командой Хекслета. Помогут глубже погрузиться в тему курса</div>
+            </div>
+        </li>
+    </ol>
+</body>
+</html>

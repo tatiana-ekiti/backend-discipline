@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./arithmetic-operations.css">
+    <title>Арифметические операции</title>
+</head>
+<body>
+    <div class="nav"><a href="/index.html">Главная</a> / <a href="./preview.html">Основы PHP</a> / Арифметические операции</div>
+    <h1>Арифметические операции</h1>
+    <ul>
+        <li><a href="#programming-arithmetic">Арифметика в программировании</a></li>
+        <li><a href="#operators">Операторы</a></li>
+        <li><a href="#commutative-operation">Коммутативная операция</a></li>
+        <li><a href="#composition-of-operations">Композиция операций</a></li>
+        <li><a href="#prioritization-of-operations">Приоритет операций</a></li>
+    </ul>
+    <p>На базовом уровне компьютеры оперируют только числами. Для сложения двух чисел в математике мы пишем, например, <code class="code">3 + 4</code>. В программировании — то же самое. В этом уроке разберем, как проводить арифметические операции в коде.</p>
+    <h2 id="programming-arithmetic">Арифметика в программировании</h2>
+    <p>Рассмотрим пример программы, которая складывает два числа:</p>
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: #b8b8b8;">// Не забываем точку с запятой в конце, так как каждая строчка в коде — инструкция</span>
+<span style="color: cornflowerblue;">3</span><span> + </span><span style="color: cornflowerblue;">4</span>;
+            </code>
+        </pre>
+    </div>
+    <p>Арифметика в программировании практически не отличается от школьной. Инструкция <code class="code">3 + 4</code>; заставит интерпретатор сложить числа и узнать результат. Эта программа будет работать, но в ней нет смысла, потому что по сути мы не даем команду интерпретатору, мы просто говорим ему «смотри, сумма трех и четырех». </p>
+    <p>В реальной работе недостаточно сообщать интерпретатору о математическом выражении. Например, при создании интернет-магазина недостаточно просить интерпретатор посчитать стоимость товаров в корзине. В этом случае нужно просить посчитать стоимость и показать цену покупателю.</p>
+    <p>Нам нужно попросить интерпретатор сложить <code class="code">3 + 4</code> и дать команду сделать что-то с результатом. Например, вывести его на экран:</p>
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: #b8b8b8;">// Снова не забываем точку с запятой в конце строчки</span>
+<span style="color: cornflowerblue;">print_r</span>(<span style="color: cornflowerblue;">3</span><span> + </span><span style="color: cornflowerblue;">4</span>); <span style="color: #b8b8b8;">// => 7</span>
+            </code>
+        </pre>
+    </div>
+
+    <p>Кроме сложения доступны следующие операции:</p>
+    <ul>
+        <li><code class="code">*</code> — умножение</li>
+        <li><code class="code">/</code> — деление</li>
+        <li><code class="code">-</code> — вычитание</li>
+        <li><code class="code">%</code> — остаток от деления</li>
+        <li><code class="code">**</code> — возведение в степень</li>
+    </ul>
+
+    <p>Эти знаки операций называют операторами. Поговорим о них подробнее.</p>
+
+    <h2 id="operators">Операторы</h2>
+
+    <p>Знак операции, например, <code class="code">+</code>, называют <b>оператором</b>. Операторы обычно представлены одним или несколькими символами, реже — словом. Обычно они соответствуют математическим операциям.</p>
+
+    <p>Операторы выполняют операции над определенными значениями, которые называются <b>операндами</b>.</p>
+    <p>Рассмотрим пример:</p>
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: cornflowerblue;">print_r</span>(<span style="color: cornflowerblue;">8</span><span> + </span><span style="color: cornflowerblue;">2</span>);
+            </code>
+        </pre>
+    </div>
+    <p>Здесь <code class="code">+</code> — это оператор, а числа <code class="code">8</code> и <code class="code">2</code> — это операнды.</p>
+
+    <p>Операции, которые требуют наличия двух операндов, называются <b>бинарными</b>. В случае сложения у нас есть два операнда: один слева от знака +, другой — справа. Если пропустить хотя бы один операнд, например, <code class="code">3 + ;</code>, то программа завершится с синтаксической ошибкой.</p>
+
+    <p>Еще операции бывают <b>унарными</b> — с одним операндом, и <b>тернарными</b> — с тремя операндами. Причем операторы могут выглядеть одинаково, но обозначать разные операции.</p>
+
+    <p>Символы + и - используются не только как операторы. Когда речь идет про отрицательные числа, то знак минуса становится частью числа:</p>
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: cornflowerblue;">print_r</span>(-<span style="color: cornflowerblue;">3</span>); <span style="color: #b8b8b8;">// => -3</span>
+            </code>
+        </pre>
+    </div>
+    <p>Выше пример применения унарной операции к числу <code class="code">3</code>. Оператор <code class="code">-</code> перед тройкой говорит интерпретатору взять число <code class="code">3</code> и найти противоположное, то есть <code class="code">-3</code>. Это может сбить с толку, потому что <code class="code">-3</code> — это одновременно и число, и оператор с операндом. Но у языков программирования такая структура:</p>
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: #b8b8b8;">// То же самое, что и 4 - 3</span>
+<span style="color: cornflowerblue;">print_r</span>(<span style="color: cornflowerblue;">4</span> + -<span style="color: cornflowerblue;">3</span>); <span style="color: #b8b8b8;">// => 1</span>
+            </code>
+        </pre>
+    </div>
+
+    <p>То же самое касается и плюса:</p>
+
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: cornflowerblue;">print_r</span>(+<span style="color: cornflowerblue;">3</span>); <span style="color: #b8b8b8;">// => 3</span>
+<span style="color: cornflowerblue;">print_r</span>(<span style="color: cornflowerblue;">1</span> + +<span style="color: cornflowerblue;">3</span>); <span style="color: #b8b8b8;">// => 4</span>
+            </code>
+        </pre>
+    </div>
+
+    <h2 id="commutative-operation">Коммутативная операция</h2>
+
+    <p>В программировании используется базовый закон арифметики: от перемены мест слагаемых сумма не меняется. Он называется <b>коммутативным законом</b>. Если поменять местами операнды в бинарной операции, и получится тот же результат, такая операция будет коммутативной. Получается, что сложение — коммутативная операция: <code class="code">3 + 2 = 2 + 3</code>.</p>
+
+
+    <p>Вычитание не будет являться коммутативной операцией: <code class="code">2 - 3 ≠ 3 - 2</code>. В программировании этот закон тоже работает. Большинство операций, с которыми мы будем сталкиваться в реальной жизни, не являются коммутативными. Поэтому всегда нужно обращать внимание на порядок того, с чем работаем.</p>
+
+    <h2 id="composition-of-operations">Композиция операций</h2>
+
+    <p>Разберем пример композиции операций:</p>
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: cornflowerblue;">print_r</span>(<span style="color: cornflowerblue;">2</span> * <span style="color: cornflowerblue;">4</span> * <span style="color: cornflowerblue;">5</span> * <span style="color: cornflowerblue;">10</span>); <span style="color: #b8b8b8;">// 2 * 4 * 5 * 10 = 8 * 5 * 10 = 40 * 10 => 400</span>
+            </code>
+        </pre>
+    </div>
+
+    <p>Операции можно соединять друг с другом. Это дает возможность вычислять более сложные составные выражения. Такое свойство операций называется <b>композицией</b>.</p>
+
+    <p>Композиция арифметических операций в программировании аналогична композиции из школьной программы. Она распространяется на все операции, а не только на арифметические.</p>
+    <p>Чтобы представить, как происходят вычисления внутри интерпретатора, разберем пример: <code class="code">2 * 4 * 5 * 10</code>.</p>
+
+    <ol>
+        <li>Сначала вычисляется <code class="code">2 * 4</code> и получается выражение <code class="code">8 * 5 * 10</code></li>
+        <li>Затем <code class="code">8 * 5</code>. В итоге имеем <code class="code">40 * 10</code></li>
+        <li>В конце происходит последнее умножение, и получается результат <code class="code">400</code></li>
+    </ol>
+
+    <h2 id="prioritization-of-operations">Приоритет операций</h2>
+    <p>В школьной математике есть понятие «приоритет операции». Приоритет определяет, в какой последовательности должны выполняться операции.</p>
+    <p>Допустим, нам нужно вычислить такое выражение: <code class="code">2 + 2 * 2</code>:</p>
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: cornflowerblue;">print_r</span>(<span style="color: cornflowerblue;">2</span> + <span style="color: cornflowerblue;">2</span> * <span style="color: cornflowerblue;">2</span>); <span style="color: #b8b8b8;">// => 6</span>
+            </code>
+        </pre>
+    </div>
+
+    <p>Интерпретатор производит арифметические вычисления в правильном порядке: сначала деление и умножение, потом сложение и вычитание, а приоритет возведения в степень выше всех остальных арифметических операций: <code class="code">2 ** 3 * 2</code> вычислится в <code class="code">16</code>.</p>
+
+    <p>Иногда вычисления должны происходить в другом порядке. В этом случае приоритет задают круглыми скобками, например: <code class="code">(2 + 2) * 2</code>. Скобки можно ставить вокруг любой операции. Они могут вкладываться друг в друга сколько угодно раз. Вот пара примеров:</p>
+
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: cornflowerblue;">print_r</span>(<span style="color: cornflowerblue;">3</span> ** (<span style="color: cornflowerblue;">4</span> - <span style="color: cornflowerblue;">2</span>)); <span style="color: #b8b8b8;">// => 9</span>
+<span style="color: cornflowerblue;">print_r</span>(<span style="color: cornflowerblue;">7</span> * <span style="color: cornflowerblue;">3</span> + (<span style="color: cornflowerblue;">4</span> / <span style="color: cornflowerblue;">2</span>) - (<span style="color: cornflowerblue;">8</span> + (<span style="color: cornflowerblue;">2</span> - <span style="color: cornflowerblue;">1</span>))); <span style="color: #b8b8b8;">// => 14</span>
+            </code>
+        </pre>
+    </div>
+    <p>В этом случае главное закрывать скобки в правильном порядке. Это часто становится причиной ошибок не только у новичков, но и у опытных программистов. Для удобства можно сразу ставить открывающую и закрывающую скобки, а потом писать внутреннюю часть.</p>
+
+    <p>Сейчас большинство редакторов кода делают это автоматически. Например, мы ставим открывающую скобку, а он автоматически ставит закрывающую. Это касается и других парных символов, например, кавычек. О них — в будущих уроках.</p>
+
+    <p>Иногда выражение сложно воспринимать визуально. Тогда можно расставить скобки, не повлияв на приоритет. Код пишется для людей, а машины будут только исполнять его. Для машин код — или корректный, или не корректный. Для них нет «более» понятного или «менее» понятного кода. Явная расстановка приоритетов упрощает чтение кода другими разработчиками.</p>
+
+    <hr>
+    <h3>Дополнительные материалы</h3>
+    <ol>
+        <li>
+            <a href="https://www.php.net/manual/ru/language.operators.php" target="_blank">Операторы в PHP</a>
+        </li>
+    </ol>
+
+    <a href="./instructions.html" class="btn-back">Назад</a>
+    <!-- <a href="./instructions.html" class="btn">Продолжить</a> -->
+</body>
+</html>

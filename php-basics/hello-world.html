@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./hello-world.css">
+    <title>Hello, World!</title>
+</head>
+<body>
+    <div class="nav"><a href="/index.html">Главная</a> / <a href="./preview.html">Основы PHP</a> / Hello, World!</div>
+    <h1>Hello, World!</h1>
+    <ul>
+        <li>
+            <a href="#simple-program">Как написать простую программу</a>
+            <ul>
+                <li><a href="#echo">Пишем программу через echo</a></li>
+                <li><a href="#printr">Пишем программу через print_r()</a></li>
+            </ul>
+        </li>
+        <li><a href="#why-use-comment">Зачем использовать теги</a></li>
+        <li><a href="#comment">Зачем нужны комментарии</a></li>
+        <li><a href="#conclusions">Выводы</a></li>
+    </ul>
+    <p>В этом уроке мы сразу напишем первую программу. Мы узнаем, какие команды понадобятся для этого и какие теги нужно использовать, чтобы программа, которая выполняет код, восприняла его. Также узнаем, зачем в коде нужны комментарии.</p>
+    <h2 id="simple-program">Как написать простую программу</h2>
+    <p>Чтобы написать программу и вывести результат на экран, используют два способа:</p>
+    <ul>
+        <li>Через команду <code class="code">echo</code></li>
+        <li>Через команду <code class="code">print_r()</code></li>
+    </ul>
+    <p>Разберем каждую подробнее.</p>
+    <h3 id="echo">Пишем программу через <code class="code">echo</code></h3>
+    <p>Напишем программу «Hello, World!». Она будет выводить на экран текст:</p>
+
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span>echo</span><span style="color: crimson;"> 'Hello, World!';</span>
+<span style="color: #b8b8b8;">// => Hello, World!</span>
+            </code>
+        </pre>
+    </div>
+
+    <p>Вывод на экран выполняется с помощью специальной команды <code class="code">echo</code>. После нее в одиночных кавычках указывается строка для вывода. В конце обязательно ставим точку с запятой.</p>
+    <p>Для удобства мы будем показывать результат запуска строк кода так: <code class="code">=> РЕЗУЛЬТАТ</code>.</p>
+
+    <h3 id="printr">Пишем программу через <code class="code">print_r()</code></h3>
+    <p>Другой способ вывести строку на экран — функция <code class="code">print_r()</code>:</p>
+
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: cornflowerblue;">print_r</span><span style="color: crimson;">('Hello, World!');</span>
+<span style="color: #b8b8b8;">// => Hello, World!</span>
+            </code>
+        </pre>
+    </div>
+
+    <p>В этом случае строка указывается в скобках сразу после имени функции. В конце также нужно ставить <code class="code">;</code>.</p>
+    <p>В простых ситуациях между этими конструкциями нет разницы. Можно использовать любой способ. А там, где на экран нужно выводить не просто числа или строки, а, например, массивы, <code class="code">echo</code> не сможет этого сделать, а <code class="code">print_r()</code> все выведет.</p>
+    <p>Разберем другие особенности вывода результата на экран.</p>
+
+    <h2 id="why-use-comment">Зачем использовать теги</h2>
+
+    <p>Чтобы <b>интерпретатор</b> — программа, которая выполняет код, — восприняла его не как обычный текст, любой код на PHP нужно оборачивать в конструкцию <code class="code">&lt;?php ?&gt;</code>. Это особенность данного языка программирования.</p>
+    <p><code class="code">&lt;?php</code> — это открывающий тег, а <code class="code">?&gt;</code> — закрывающий тег. PHP позволяет не указывать закрывающую часть <code class="code">?&gt;</code>. А руководство по оформлению кода PSR-12 запрещает ее указывать.</p>
+    <p>Теперь разберем еще один элемент кода — комментарии. Они особенно важны для разработчиков.</p>
+
+    <h2 id="comment">Зачем нужны комментарии</h2>
+    <p>Кроме кода в файлах с исходным кодом могут находиться комментарии. Этот текст не является частью программы. Он нужен программистам для пометок. С их помощью добавляют пояснения, например, как работает код, какие ошибки нужно поправить или не забыть что-то позже добавить.</p>
+    <p>Комментарии в PHP бывают двух видов:</p>
+    <ul>
+        <li><b>Однострочные комментарии</b> — начинаются с <code class="code">//</code> или <code class="code">#</code>. После этих символов может следовать любой текст, вся строка не будет анализироваться и исполняться:</li>
+    </ul>
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: #b8b8b8;">// For Winterfell!</span>
+<span style="color: #b8b8b8;">// For Lanisters!</span>
+<span style="color: #b8b8b8;">// Комментарий может находиться на строке после какого-нибудь кода</span>
+<span style="color: cornflowerblue;">print_r</span><span style="color: crimson;">('I am cool and I know it!');</span>
+            </code>
+        </pre>
+    </div>
+    <ul>
+        <li>Многострочные комментарии — начинаются с <code class="code">/*</code> и заканчиваются на <code class="code">*/</code>. Между ними каждая строка начинается с символа <code class="code">*</code>:</li>
+    </ul>
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: #b8b8b8;">/*</span>
+<span style="color: #b8b8b8;">* The night is dark and</span>
+<span style="color: #b8b8b8;">* full of terrors.</span>
+<span style="color: #b8b8b8;">*/</span>
+<span style="color: cornflowerblue;">print_r</span><span style="color: crimson;">('I am cool and I know it!');</span>
+            </code>
+        </pre>
+    </div>
+
+    <h2 id="conclusions">Выводы</h2>
+
+    <p>В этом уроке мы научились создавать простую программу на языке PHP, которая выводит на экран текст «Hello, World!». Мы узнали, что для вывода результата можно использовать два варианта: через команды <code class="code">echo</code> или <code class="code">print_r()</code>.</p>
+    <p>Также мы познакомились с тегами, без которых интерпретатор будет воспринимать код, как обычный текст. Еще мы узнали, что внутри кода можно оставлять комментарии, которые не будут являться частью кода. Они нужны, чтобы разработчики могли оставлять для себя и коллег пометки по работе с кодом.</p>
+
+    <a href="./intro.html" class="btn-back">Назад</a>
+    <a href="./instructions.html" class="btn">Продолжить</a>
+</body>
+</html>

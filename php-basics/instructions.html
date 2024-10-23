@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./instructions.css">
+    <title>Инструкции</title>
+</head>
+<body>
+    <div class="nav"><a href="/index.html">Главная</a> / <a href="./preview.html">Основы PHP</a> / Инструкции</div>
+    <h1>Инструкции</h1>
+
+    <ul>
+        <li><a href="#what-is-instructions">Что такое инструкция</a></li>
+        <li><a href="#conclusions">Выводы</a></li>
+    </ul>
+    <p>В этом уроке мы изучим команду, которая указывает компьютеру, что нужно выполнить. Речь пойдет об инструкциях.</p>
+    <h2 id="what-is-instructions">Что такое инструкция</h2>
+    <p><b>Инструкция</b> — это команда, которую исполняет интерпретатор PHP. Она написана на языке программирования. Ее можно сравнить с инструкцией или рецептом по приготовлению блюда:</p>
+    <p>Код на PHP — это набор инструкций, которые отделяются друг от друга символом <code class="code">;</code>.</p>
+    <p>Вот пример кода с двумя инструкциями:</p>
+
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: cornflowerblue;">print_r</span><span style="color: crimson;">('Привет. ');</span>
+<span style="color: cornflowerblue;">print_r</span><span style="color: crimson;">('Как тебя зовут?');</span>
+<span style="color: #b8b8b8;">// => Привет. Как тебя зовут?</span>
+            </code>
+        </pre>
+    </div>
+
+    <p>При запуске этого кода на экран последовательно выводятся два предложения: <code class="code">Привет. Как тебя зовут?</code>.</p>
+    <p>Инструкции можно написать последовательно друг за другом без переноса на новую строчку:</p>
+    <div class="code-block">
+        <pre>
+            <code>
+<span style="color: #b8b8b8;">&lt;?</span><span style="color: #b8b8b8;">php</span>
+
+<span style="color: cornflowerblue;">print_r</span><span style="color: crimson;">('Привет. '); </span><span style="color: cornflowerblue;">print_r</span><span style="color: crimson;">('Как тебя зовут?');</span>
+<span style="color: #b8b8b8;">// => Привет. Как тебя зовут?</span>
+            </code>
+        </pre>
+    </div>
+
+    <h2 id="conclusions">Выводы</h2>
+    <p>В этом уроке мы узнали, что такое инструкции в языке PHP. Это единица исполнения, а интерпретатор — программа, которая запускает код на PHP и выполняет инструкции по очереди.</p>
+    <p>Разработчики должны понимать этот порядок и уметь мысленно разделять программу на независимые части, удобные для анализа.</p>
+
+    <hr>
+    <h3>Дополнительные материалы</h3>
+    <ol>
+        <li>
+            <a href="https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BF%D1%80%D0%B5%D1%82%D0%B0%D1%82%D0%BE%D1%80" target="_blank">Немного об интерпретаторах</a>
+        </li>
+    </ol>
+
+    <a href="./hello-world.html" class="btn-back">Назад</a>
+    <a href="./arithmetic-operations.html" class="btn">Продолжить</a>
+</body>
+</html>
